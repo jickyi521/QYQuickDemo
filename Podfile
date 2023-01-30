@@ -14,6 +14,9 @@ target 'QYQuickDemo' do
   # Pods for QYQuickDemo
 
   pod 'RDVTabBarController'
+  
+  #Debug调试工具
+  pod 'LookinServer', :configurations => ['Debug']
 
   target 'QYQuickDemoTests' do
     inherit! :search_paths
