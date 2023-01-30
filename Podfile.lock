@@ -1,0 +1,16 @@
+PODS:
+  - RDVTabBarController (1.3.0)
+
+DEPENDENCIES:
+  - RDVTabBarController
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - RDVTabBarController
+
+SPEC CHECKSUMS:
+  RDVTabBarController: 28a5c6546b9991cf2712d59947324c6b06603e14
+
+PODFILE CHECKSUM: 7dbbcc0b53e0677983ea931dfe9ece6fd7de038d
+
+COCOAPODS: 1.11.3
