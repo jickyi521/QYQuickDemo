@@ -69,6 +69,7 @@
 		065E09892987B04800B1AD63 /* ThirdTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 		065E098B2987B06300B1AD63 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		065E098C2987B06300B1AD63 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		065E098E2988E0A100B1AD63 /* QYQuickDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYQuickDemo.pch; sourceTree = "<group>"; };
 		30B3F74CC10040AE61FAC932 /* Pods-QYQuickDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYQuickDemo.debug.xcconfig"; path = "Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3E27C3BD418534320ABCCD3E /* Pods-QYQuickDemo-QYQuickDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYQuickDemo-QYQuickDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5346BD0EE2E99DBF26367801 /* libPods-QYQuickDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QYQuickDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +146,7 @@
 				065E09582987AD8D00B1AD63 /* LaunchScreen.storyboard */,
 				065E095B2987AD8D00B1AD63 /* Info.plist */,
 				065E095C2987AD8D00B1AD63 /* main.m */,
+				065E098E2988E0A100B1AD63 /* QYQuickDemo.pch */,
 			);
 			path = QYQuickDemo;
 			sourceTree = "<group>";

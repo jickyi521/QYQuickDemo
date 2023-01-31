@@ -1,0 +1,21 @@
+//
+//  QYQuickDemo.pch
+//  QYQuickDemo
+//
+//  Created by qianyi on 2023/1/31.
+//
+
+#ifndef QYQuickDemo_pch
+#define QYQuickDemo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define YDL_PROPERTY(...) @property(nonatomic, ##__VA_ARGS__)
+#define YDL_PROPERTY_STRONG YDL_PROPERTY(strong)
+#define YDL_PROPERTY_ASSIGN YDL_PROPERTY(assign)
+#define YDL_PROPERTY_WEAK   YDL_PROPERTY(weak)
+#define YDL_PROPERTY_COPY   YDL_PROPERTY(copy)
+
+#endif /* QYQuickDemo_pch */

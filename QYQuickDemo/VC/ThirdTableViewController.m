@@ -8,8 +8,11 @@
 #import "ThirdTableViewController.h"
 #import "RDVTabBarController.h"
 #import "DetailViewController.h"
+#import "QYQuickDemo.pch"
 
 @interface ThirdTableViewController ()
+
+YDL_PROPERTY_STRONG NSArray *dataSource;
 
 @end
 
@@ -37,12 +40,28 @@
         self.tableView.contentInset = insets;
         self.tableView.scrollIndicatorInsets = insets;
     }
+    
+    
+    self.dataSource = @[@{@"title": @"demo-1", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-2", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-3", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-4", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-5", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-6", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-7", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-8", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-9", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-10", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-11", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-12", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-13", @"class": @"DetailViewController"},
+                        @{@"title": @"demo-14", @"class": @"DetailViewController"}];
 }
 
 #pragma mark - Methods
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
-    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ Controller Cell %ld", self.title, (long)indexPath.row]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ Controller Cell %ld", self.dataSource[indexPath.row][@"title"], (long)indexPath.row]];
 }
 
 #pragma mark - Table view
@@ -60,14 +79,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+    return self.dataSource.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UIViewController *viewController = [[DetailViewController alloc] init];
-    [self.navigationController pushViewController:viewController animated:YES];
+//    UIViewController *viewController = [[DetailViewController alloc] init];
+//    [self.navigationController pushViewController:viewController animated:YES];
+    
+    NSDictionary *dic = self.dataSource[indexPath.row];
+    NSString *className = dic[@"class"];
+    UIViewController *vc = [[NSClassFromString(className) alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
