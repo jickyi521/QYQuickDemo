@@ -21,6 +21,7 @@
 		065E09872987B03400B1AD63 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065E09862987B03400B1AD63 /* SecondTableViewController.m */; };
 		065E098A2987B04800B1AD63 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065E09892987B04800B1AD63 /* ThirdTableViewController.m */; };
 		065E098D2987B06300B1AD63 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065E098C2987B06300B1AD63 /* DetailViewController.m */; };
+		065E099229890D9400B1AD63 /* TRTCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065E099129890D9400B1AD63 /* TRTCDemoViewController.m */; };
 		25AD185B7824DEE95729CA6A /* libPods-QYQuickDemo-QYQuickDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AD2FC72B78E6E750252AB6 /* libPods-QYQuickDemo-QYQuickDemoUITests.a */; };
 		9E2BA4A7DA4623D2321062F7 /* libPods-QYQuickDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5346BD0EE2E99DBF26367801 /* libPods-QYQuickDemo.a */; };
 		E8B3E92147FD61902AF004BA /* libPods-QYQuickDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C36D66928BBDB50CBF079EDC /* libPods-QYQuickDemoTests.a */; };
@@ -70,6 +71,8 @@
 		065E098B2987B06300B1AD63 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		065E098C2987B06300B1AD63 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		065E098E2988E0A100B1AD63 /* QYQuickDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYQuickDemo.pch; sourceTree = "<group>"; };
+		065E099029890D9400B1AD63 /* TRTCDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRTCDemoViewController.h; sourceTree = "<group>"; };
+		065E099129890D9400B1AD63 /* TRTCDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRTCDemoViewController.m; sourceTree = "<group>"; };
 		30B3F74CC10040AE61FAC932 /* Pods-QYQuickDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYQuickDemo.debug.xcconfig"; path = "Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3E27C3BD418534320ABCCD3E /* Pods-QYQuickDemo-QYQuickDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYQuickDemo-QYQuickDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5346BD0EE2E99DBF26367801 /* libPods-QYQuickDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QYQuickDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +174,7 @@
 		065E09812987AFFA00B1AD63 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				065E098F29890D7C00B1AD63 /* TRTC */,
 				065E09822987B01E00B1AD63 /* FirstTableViewController.h */,
 				065E09832987B01E00B1AD63 /* FirstTableViewController.m */,
 				065E09852987B03400B1AD63 /* SecondTableViewController.h */,
@@ -181,6 +185,15 @@
 				065E098C2987B06300B1AD63 /* DetailViewController.m */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		065E098F29890D7C00B1AD63 /* TRTC */ = {
+			isa = PBXGroup;
+			children = (
+				065E099029890D9400B1AD63 /* TRTCDemoViewController.h */,
+				065E099129890D9400B1AD63 /* TRTCDemoViewController.m */,
+			);
+			path = TRTC;
 			sourceTree = "<group>";
 		};
 		9AF20F566FE300A440BD01C3 /* Frameworks */ = {
@@ -217,6 +230,8 @@
 				065E09432987AD8C00B1AD63 /* Sources */,
 				065E09442987AD8C00B1AD63 /* Frameworks */,
 				065E09452987AD8C00B1AD63 /* Resources */,
+				05F0FB251FB86FEB4D7700DC /* [CP] Embed Pods Frameworks */,
+				9B304DEEE133171EBE3A3DDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +269,8 @@
 				065E09682987AD8E00B1AD63 /* Sources */,
 				065E09692987AD8E00B1AD63 /* Frameworks */,
 				065E096A2987AD8E00B1AD63 /* Resources */,
+				9C58F836694F87EF5B65C909 /* [CP] Embed Pods Frameworks */,
+				AB6939E3CAE2DE2FC245628B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,6 +352,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05F0FB251FB86FEB4D7700DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0A3174A7BD4C272A4E3C3583 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +413,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9B304DEEE133171EBE3A3DDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo/Pods-QYQuickDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C58F836694F87EF5B65C909 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A407620DC78C6CF7FCE49F1D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +469,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB6939E3CAE2DE2FC245628B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYQuickDemo-QYQuickDemoUITests/Pods-QYQuickDemo-QYQuickDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -408,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065E099229890D9400B1AD63 /* TRTCDemoViewController.m in Sources */,
 				065E098A2987B04800B1AD63 /* ThirdTableViewController.m in Sources */,
 				065E09522987AD8C00B1AD63 /* ViewController.m in Sources */,
 				065E094C2987AD8C00B1AD63 /* AppDelegate.m in Sources */,
@@ -592,11 +678,14 @@
 				DEVELOPMENT_TEAM = Q4RW99WHTS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QYQuickDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问您的相机权限，开启后录制的视频才会有画面";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问您的麦克风权限，开启后录制的视频才会有声音";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,11 +709,14 @@
 				DEVELOPMENT_TEAM = Q4RW99WHTS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QYQuickDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问您的相机权限，开启后录制的视频才会有画面";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问您的麦克风权限，开启后录制的视频才会有声音";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

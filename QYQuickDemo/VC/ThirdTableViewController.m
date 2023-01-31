@@ -42,7 +42,7 @@ YDL_PROPERTY_STRONG NSArray *dataSource;
     }
     
     
-    self.dataSource = @[@{@"title": @"demo-1", @"class": @"DetailViewController"},
+    self.dataSource = @[@{@"title": @"TRTCDemo", @"class": @"TRTCDemoViewController"},
                         @{@"title": @"demo-2", @"class": @"DetailViewController"},
                         @{@"title": @"demo-3", @"class": @"DetailViewController"},
                         @{@"title": @"demo-4", @"class": @"DetailViewController"},
@@ -61,7 +61,7 @@ YDL_PROPERTY_STRONG NSArray *dataSource;
 #pragma mark - Methods
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
-    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ Controller Cell %ld", self.dataSource[indexPath.row][@"title"], (long)indexPath.row]];
+    [[cell textLabel] setText:self.dataSource[indexPath.row][@"title"]];
 }
 
 #pragma mark - Table view
