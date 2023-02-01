@@ -42,7 +42,7 @@ YDL_PROPERTY_STRONG NSArray *dataSource;
     }
     
     
-    self.dataSource = @[@{@"title": @"TRTCDemo", @"class": @"TRTCDemoViewController"},
+    self.dataSource = @[@{@"title": @"腾讯云直播 TRTCDemo", @"class": @"TRTCDemoViewController"},
                         @{@"title": @"demo-2", @"class": @"DetailViewController"},
                         @{@"title": @"demo-3", @"class": @"DetailViewController"},
                         @{@"title": @"demo-4", @"class": @"DetailViewController"},
