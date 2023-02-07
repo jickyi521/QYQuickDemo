@@ -487,8 +487,8 @@
     VC.URLString = urlString;
     //此处不要直接取keyWindow
     UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-//    [rootVC pushViewController:VC animated:YES];
-    [rootVC.navigationController pushViewController:VC animated:YES];
+//    [rootVC.navigationController pushViewController:VC animated:YES];
+    [rootVC presentViewController:VC animated:YES completion:nil];
     
     return YES;//YES移除广告,NO不移除广告
 }

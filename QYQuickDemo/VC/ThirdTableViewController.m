@@ -9,6 +9,7 @@
 #import "RDVTabBarController.h"
 #import "DetailViewController.h"
 #import "QYQuickDemo.pch"
+#import "WebViewController.h"
 
 @interface ThirdTableViewController ()
 
@@ -43,7 +44,7 @@ YDL_PROPERTY_STRONG NSArray *dataSource;
     
     self.dataSource = @[@{@"title": @"腾讯云直播 TRTCDemo", @"class": @"TRTCDemoViewController"},
                         @{@"title": @"开屏广告", @"class": @"LaunchAdViewController"},
-                        @{@"title": @"demo-3", @"class": @"DetailViewController"},
+                        @{@"title": @"webview", @"class": @"WebViewController"},
                         @{@"title": @"demo-4", @"class": @"DetailViewController"},
                         @{@"title": @"demo-5", @"class": @"DetailViewController"},
                         @{@"title": @"demo-6", @"class": @"DetailViewController"},
@@ -90,6 +91,11 @@ YDL_PROPERTY_STRONG NSArray *dataSource;
     NSDictionary *dic = self.dataSource[indexPath.row];
     NSString *className = dic[@"class"];
     UIViewController *vc = [[NSClassFromString(className) alloc] init];
+    
+    if([vc isKindOfClass:[WebViewController class]]) {
+        vc = [[WebViewController alloc] init];
+        ((WebViewController *)vc).URLString = @"https://www.ydl.com";
+    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 
