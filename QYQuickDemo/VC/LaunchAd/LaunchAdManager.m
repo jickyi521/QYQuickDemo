@@ -11,6 +11,7 @@
 #import "LaunchAdModel.h"
 #import "WebViewController.h"
 #import "QYQuickDemo.pch"
+#import "AXWebViewController.h"
 
 /** 以下连接供测试使用 */
 
@@ -482,13 +483,21 @@
     
     if(openModel == nil) return NO;
     
-    WebViewController *VC = [[WebViewController alloc] init];
     NSString *urlString = (NSString *)openModel;
-    VC.URLString = urlString;
-    //此处不要直接取keyWindow
     UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-//    [rootVC.navigationController pushViewController:VC animated:YES];
-    [rootVC presentViewController:VC animated:YES completion:nil];
+    AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:urlString];
+    webVC.navigationType = AXWebViewControllerNavigationBarItem;
+//    webVC.navigationType = AXWebViewControllerNavigationToolItem;
+//    webVC.showsToolBar = YES;
+    webVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:webVC];
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    nav.navigationBar.tintColor = [UIColor colorWithRed:0.322 green:0.322 blue:0.322 alpha:1.00];
+    [rootVC presentViewController:nav animated:YES completion:NULL];
+    
+//    [rootVC presentViewController:webVC animated:YES completion:nil];
     
     return YES;//YES移除广告,NO不移除广告
 }

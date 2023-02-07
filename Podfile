@@ -15,6 +15,7 @@ target 'QYQuickDemo' do
 
   # Pods for QYQuickDemo
 
+  pod 'AXWebViewController'
   pod 'RDVTabBarController'
   
   #Debug调试工具

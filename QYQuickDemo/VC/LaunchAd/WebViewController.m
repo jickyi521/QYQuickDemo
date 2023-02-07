@@ -18,6 +18,15 @@
 
 @implementation WebViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    return self;
+}
+
 -(void)dealloc
 {
     /**
