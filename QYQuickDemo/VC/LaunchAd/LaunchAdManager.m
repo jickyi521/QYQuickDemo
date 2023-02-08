@@ -134,7 +134,7 @@
         //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
         imageAdconfiguration.openModel = model.openUrl;
         //广告显示完成动画
-        imageAdconfiguration.showFinishAnimate =ShowFinishAnimateLite;
+        imageAdconfiguration.showFinishAnimate = ShowFinishAnimateNone;
         //广告显示完成动画时间
         imageAdconfiguration.showFinishAnimateTime = 0.8;
         //跳过按钮类型
