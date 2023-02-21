@@ -120,7 +120,7 @@
         //广告停留时间
         imageAdconfiguration.duration = model.duration;
         //广告frame
-        imageAdconfiguration.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.8);
+        imageAdconfiguration.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 102);
         //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
         //注意本地广告图片,直接放在工程目录,不要放在Assets里面,否则不识别,此处涉及到内存优化
         imageAdconfiguration.imageNameOrURLString = model.content;
@@ -145,7 +145,7 @@
         //图片已缓存 - 显示一个 "已预载" 视图 (可选)
         if([XHLaunchAd checkImageInCacheWithURL:[NSURL URLWithString:model.content]]){
             //设置要添加的自定义视图(可选)
-            imageAdconfiguration.subViews = [self launchAdSubViews_alreadyView];
+//            imageAdconfiguration.subViews = [self launchAdSubViews_alreadyView];
             
         }
         //显示开屏广告
